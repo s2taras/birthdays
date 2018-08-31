@@ -1,13 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-$birthDate = "1992-10-11";
-$todayDate = date("Y-m-d");
+include "src/Dates/BirthDays.php";
 
-$birthTime = strtotime($birthDate);
-$todayTime = strtotime($todayDate);
+$opts = getopt("b::");
+$birthDate = $opts["b"] ?? "1992-10-11";
 
-$totalSeconds = $todayTime - $birthTime;
-$totalDays = floor($totalSeconds / 3600 / 24);
+$days = new \Lytvyn\Dates\BirthDays($birthDate);
 
-echo "$birthDate: $totalDays\n";
+echo "$birthDate: {$days->findTotalDays()}\n";
