@@ -1,0 +1,18 @@
+{
+    "name": "lytvyn/dates",
+    "description": "find days number from birthday to today",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Taras Lytvyn",
+            "email": "litvint15@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Lytvyn\\" : "src"
+        }
+    }
+}
